@@ -41,5 +41,4 @@ cuplikankueri.forEach((dokumen) => {
  })
  
  return hasilkueri;
-
 }
