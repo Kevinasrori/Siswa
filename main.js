@@ -26,7 +26,7 @@ const firebaseConfig = {
 const aplikasi = initializeApp(firebaseConfig)
 const basidata = getFirestore(aplikasi)
 
-export async function ambilDaftarsiswaw()
+export async function ambilDaftarsiswaw(){
 const refdokumen = collection(basidata,"siswa");
 const kueri = query(refdokumen, orderBy("nama"));
 const cuplikankueri = await getDocs(kueri);
@@ -35,7 +35,7 @@ let hasilkueri = [];
 cuplikankueri.forEach((dokumen) => {
   hasilkueri.push({
     id: dokumen.id, 
-    nama: dokumen.data().nama
+    nama: dokumen.data().nama, 
     alamat: dokumen.data().alamat
   })
  })
